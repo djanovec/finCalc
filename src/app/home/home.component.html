@@ -1,0 +1,32 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm">Start Value</div>
+    <div class="col-sm">Interest Rate</div>
+    <div class="col-sm">Years</div>
+    <div class="col-sm">Ending Value</div>
+  </div>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+      <input type="number" name="presentValue" [(ngModel)]="presentValue">
+    </div>
+    <div class="col-sm">
+      <input type="number" name="interest" [(ngModel)]="interest">
+    </div>
+    <div class="col-sm">
+      <input type="number" name="numPeriods" [(ngModel)]="numPeriods">
+    </div>
+    <div class="col-sm">
+      <button type="button" (click)="calcFV()"> Find</button>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+      <p *ngIf="presentValue && interest && numPeriods">{{presentValue}} * (1 + {{interest}}/100)<sup>{{numPeriods}}</sup>
+      <p>The ending value is = {{futureValue | number:'1.2-2'}} </p>
+    </div>
+  </div>
+</div>
