@@ -2,7 +2,7 @@
   <div class="row">
     <div class="col-sm">Start Value</div>
     <div class="col-sm">Interest Rate</div>
-    <div class="col-sm">Years</div>
+    <div class="col-sm">Periods</div>
     <div class="col-sm">Ending Value</div>
   </div>
 </div>
@@ -25,7 +25,8 @@
 <div class="container">
   <div class="row">
     <div class="col-sm">
-      <p *ngIf="presentValue && interest && numPeriods">{{presentValue}} * (1 + {{interest}}/100)<sup>{{numPeriods}}</sup>
+        <!-- *ngIf="presentValue && interest && numPeriods" -->
+      <!-- <p>{{presentValue}} * (1 + {{interest}}/100)<sup>{{numPeriods}}</sup> -->
       <p>The ending value is = {{futureValue | number:'1.2-2'}} </p>
     </div>
   </div>
