@@ -27,6 +27,7 @@ futureValue: number;     //<div>The future value is = {{futureValue | number:'1.
 calcFV() {
     let x = (1 + this.interest / 100);
     this.futureValue = this.presentValue * (Math.pow(x, this.numPeriods));
+    
 } 
 
   constructor() {
